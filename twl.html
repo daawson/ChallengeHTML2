@@ -1,0 +1,87 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith:400,700" rel="stylesheet"> <!-- er zijn 2 types van zelfde font 400 en 700 dus regular en bold -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+<header>
+    <p id="logo">Challenge</p>
+    <p id="logo_desc">Effe bikkelen op een mooie website</p>
+</header>
+<nav>
+    <div id="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="#">Archeologie</a>
+        <a href="#">Backpacking</a>
+        <a href="#">Bergbeklimmen</a>
+    </div>
+    <div id="nav-bar-dropdown">
+        <button id="menu" onclick="toggleDropDown()"><img src="bicon.svg" style="color: gray; float: left;">Menu</button>
+        <div id="drop" class="hide">
+            <a href="index.html">Home</a>
+            <a href="#">Archeologie</a>
+            <a href="#">Backpacking</a>
+            <a href="#">Bergbeklimmen</a>
+        </div>
+    </div>
+</nav>
+<main>
+    <div id="wrap">
+        <section>
+            <article class="big">
+                <h1>Tis weer lente</h1>
+                <p class="desc">Geplaatst 17 Januari door mij</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec ac ante quis leo luctus tincidunt vitae in leo.
+                    Fusce sem nunc, mollis vel dolor vel, imperdiet luctus lectus.</p>
+                <img class='scale' src="img/cow.jpg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec ac ante quis leo luctus tincidunt vitae in leo.
+                Fusce sem nunc, mollis vel dolor vel, imperdiet luctus lectus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec ac ante quis leo luctus tincidunt vitae in leo.
+                    Fusce sem nunc, mollis vel dolor vel, imperdiet luctus lectus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec ac ante quis leo luctus tincidunt vitae in leo.
+                    Fusce sem nunc, mollis vel dolor vel, imperdiet luctus lectus.</p>
+                <p></p>
+            </article>
+            <article class="big">
+                <p>Stuur ons een bericht!</p>
+                <form>
+                    Naam:<br>
+                    <input type="text" id="name"><br>
+                    Bericht:<br>
+                    <input type="text" id="msg"><br>
+                    <input type="submit" value="Zend bericht">
+                </form>
+                <p></p>
+            </article>
+        </section>
+        <section>
+
+            <article class="sideart mg"><a class='mg' href="index.html">Home</a></article>
+            <article class="sideart mg"><a class='mg' href="vk.html">Volgende artikel</a> </article>
+            <article class="sideart">
+                <h1>Laatste berichten</h1>
+                <a href="twl.html">Tis weer lente</a>
+                <a href="vk.html">Verder kijken</a>
+                <a href="#">No messages.</a>
+                <a href="#">No messages.</a>
+            </article>
+            <article class="sideart">
+                <h1>Dieren in het nieuws</h1>
+                <a href="#">In het nieuws</a>
+                <a href="#">Lente berichten</a>
+            </article>
+        </section>
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

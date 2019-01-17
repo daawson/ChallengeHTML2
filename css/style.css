@@ -75,9 +75,14 @@ article{
     text-align: left;
     margin-top: 10px;
     width: 48%;
-    height: 250px;
+    height: 290px;
     background-color: white;
     box-shadow: 0 0 2px 2px #9b9b9b;
+}
+
+article.big{
+    width: 90%;
+    height: auto;
 }
 section:last-of-type article{
     width: 100%;
@@ -121,9 +126,9 @@ p.desc{
 }
 
 article p{
-    margin-left: 9px;
     font-size: 16px;
-    overflow: hidden;
+    width: 99%;
+    margin-left: 9px;
     height: 40%;
 }
 
@@ -184,6 +189,53 @@ article p{
 #drop a:hover{
     text-decoration: underline;
 }
+
+
+.sideart.mg a{
+    text-align: center;
+    margin: unset;
+    line-height: 75px;
+    font-size: 18px;
+}
+
+article.sideart.mg{
+    height: 75px;
+}
+article p:last-of-type{
+    width: 97%;
+    border-top: 1px solid #d2d2d2;
+    color: #9f9f9f;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px auto 0;
+    padding-top: 5px;
+}
+article.big{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.scale{
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+article.big p{
+    height: auto;
+}
+
+article.big form{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+#msg{
+    width: 100%;
+    height: 150px;
+}
 /*#endregion*/
 
 @media screen and (max-width:700px) {
@@ -202,6 +254,9 @@ article p{
     section:last-of-type article, section:last-of-type article:last-of-type{
         width: 97%;
     }
+    article.big{
+        width: 95%;
+    }
     #nav-bar{
         display: none;
     }
@@ -213,10 +268,18 @@ article p{
     #menu{
         display: inline-block;
         font-size: 15px;
-        color: black;
+        line-height: 35px;
+        color: white;
+        background-color: black;
         height: 100%;
-        width: 50px;
+        width: 100px;
         border: 0;
+    }
+    #menu:hover{
+        cursor: pointer;
+    }
+    #menu img{
+        filter: invert(100%);
     }
 }
 
