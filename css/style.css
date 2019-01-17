@@ -10,7 +10,7 @@ body{
     margin: 0 auto;
 }
 header{
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     line-height: 10px;
 }
@@ -28,28 +28,65 @@ nav{
     background-color: black;
 }
 
+#nav-bar{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#nav-bar a{
+    font-size: 18px;
+    margin-left: 20px;
+    float: left;
+    display: block;
+    text-decoration: none;
+    line-height: 35px;
+    color: white;
+}
+#nav-bar a:hover{
+    text-decoration: underline;
+}
+
 main{
     width: 100%;
-    height: 600px;
     margin: 0 auto;
     background-color: #c5c5c5;
+    text-align: center;
 }
 #wrap{
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+    width: 80%;
+    margin: 0 auto 10px;
+    display: inline-flex;
+    justify-content: space-evenly;
 }
 section{
-    background-color: white;
-    margin-top: 8px;
     display: flex;
-    width: 74%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    width: 75%;
 }
+
 section:last-of-type{
+    display: flex;
     width: 25%;
+}
+
+article{
+    text-align: left;
+    margin-top: 10px;
+    width: 48%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0 0 2px 2px #9b9b9b;
+}
+section:last-of-type article{
+    width: 100%;
+    height: 150px;
+}
+section:last-of-type article:last-of-type{
+    width: 100%;
+    height: 120px;
+    margin-top: 9px;
 }
 footer{
     width: 100%;
@@ -57,7 +94,131 @@ footer{
     background-color: black;
 }
 
+.sideart a{
+    text-decoration: none;
+    float: left;
+    width: 100%;
+    margin-left: 12px;
+    font-size: 14px;
+    color: black;
+}
+.sideart h1{
+    font-size: 14px;
+}
+.sideart a:hover{
+    color: gray;
+}
+article h1{
+    margin-left: 9px;
+    height: 10px;
+    font-size: 24px;
+}
+p.desc{
+    height: 15px;
+    margin-left: 9px;
+    font-size: 12px;
+    color:gray;
+}
+
+article p{
+    margin-left: 9px;
+    font-size: 16px;
+    overflow: hidden;
+    height: 40%;
+}
+
+.readmore{
+    line-height: 25px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    margin-left: 5px;
+    width: 90px;
+    height: 25px;
+    background-color: #de002e;
+    box-shadow: 0 0 1px 1px #a7a7a7;
+    text-shadow: 0 0 2px 2px black;
+}
+
+.readmore:hover{
+    background-color: #d3002d;
+}
+#nav-bar-dropdown{
+    display: none;
+}
+#drop {
+    display: none;
+}
+#drop.show {
+    -webkit-animation: in 700ms ease both;
+    animation: in 700ms ease both;
+}
+
+#drop.hide {
+    -webkit-animation: out 700ms ease both;
+    animation: out 700ms ease both;
+}
+@keyframes in {
+    0% { transform: scaleY(0); opacity: 0;}
+    100% { transform: scaleY(1); opacity: 1;}
+}
+@keyframes out {
+    0% { transform: scaleY(1); opacity: 1;}
+    100% { transform: scaleY(0); opacity: 0;}
+}
+
+#drop a{
+    width: 100%;
+    font-size: 18px;
+    float: left;
+    display: block;
+    text-decoration: none;
+    background-color: black;
+    line-height: 35px;
+    color: white;
+}
+#drop a:hover{
+    text-decoration: underline;
+}
 /*#endregion*/
+
+@media screen and (max-width:700px) {
+    header{
+        text-align: center;
+    }
+    #wrap{
+        flex-direction: column;
+    }
+    section{
+        width: 100%;
+    }
+    section:last-of-type{
+        width: 100%;
+    }
+    section:last-of-type article, section:last-of-type article:last-of-type{
+        width: 97%;
+    }
+    #nav-bar{
+        display: none;
+    }
+    #nav-bar-dropdown{
+        display: block;
+        transition: 0.1s ease-in-out;
+    }
+
+    #menu{
+        display: inline-block;
+        font-size: 15px;
+        color: black;
+        height: 100%;
+        width: 50px;
+        border: 0;
+    }
+}
 
 @media screen and (max-width:550px) {
     header{
@@ -74,8 +235,25 @@ footer{
         align-items: center;
     }
     section, section:last-of-type{
-        display: flex;
-        width: 95%;
-        height: 150px;
+        display: inline-flex;
+        width: 100%;
     }
+    article{
+        width: 95%;
+    }
+    section:last-of-type article{
+        width: 95%;
+    }
+    section:last-of-type article:last-of-type{
+        width: 95%;
+    }
+    article p{
+        font-size: 14px;
+    }
+
+    .readmore{
+        margin-top: 25px;
+    }
+
+
 }

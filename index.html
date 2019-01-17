@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Thasadith:400,700" rel="stylesheet"> <!-- er zijn 2 types van zelfde font 400 en 700 dus regular en bold -->
         <link type="text/css" rel="stylesheet" href="css/style.css">
-        <script type="javascript" rel="script" src="js/script.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header>
@@ -11,21 +11,50 @@
             <p id="logo_desc">Effe bikkelen op een mooie website</p>
         </header>
     <nav>
-
+        <div id="nav-bar">
+            <a href="#">Home</a>
+            <a href="#">Archeologie</a>
+            <a href="#">Backpacking</a>
+            <a href="#">Bergbeklimmen</a>
+        </div>
+        <div id="nav-bar-dropdown">
+            <button id="menu" onclick="toggleDropDown()"><img src="bicon.svg" style="color: gray;"> </button>
+            <div id="drop" class="hide">
+                <a href="#">Home</a>
+                <a href="#">Archeologie</a>
+                <a href="#">Backpacking</a>
+                <a href="#">Bergbeklimmen</a>
+            </div>
+        </div>
     </nav>
     <main>
         <div id="wrap">
             <section>
-                TEST
+                <article>
+                    <h1>Tis weer lente</h1>
+                    <p class="desc">Geplaatst 17 Januari door mij</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec ac ante quis leo luctus tincidunt vitae in leo.
+                        Fusce sem nunc, mollis vel dolor vel, imperdiet luctus lectus.</p>
+                    <a href="#" class="readmore">Lees verder</a>
+                </article>
+                <article></article>
+                <article></article>
+                <article></article>
             </section>
             <section>
-                TEST
-            </section>
-            <section>
-                TEST
-            </section>
-            <section>
-                TEST
+                <article class="sideart">
+                    <h1>Laatste berichten</h1>
+                    <a href="#">Tis weer lente</a>
+                    <a href="#">Tis weer lente</a>
+                    <a href="#">Tis weer lente</a>
+                    <a href="#">Tis weer lente</a>
+                </article>
+                <article class="sideart">
+                    <h1>Dieren in het nieuws</h1>
+                    <a href="#">In het nieuws</a>
+                    <a href="#">Lente berichten</a>
+                </article>
             </section>
         </div>
     </main>
