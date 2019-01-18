@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -14,7 +19,7 @@
         </header>
     <nav>
         <div id="nav-bar">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             <a href="#">Archeologie</a>
             <a href="#">Backpacking</a>
             <a href="#">Bergbeklimmen</a>
@@ -22,11 +27,21 @@
         <div id="nav-bar-dropdown">
             <button id="menu" onclick="toggleDropDown()"><img src="bicon.svg" style="color: gray; float: left;">Menu</button>
             <div id="drop" class="hide">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
                 <a href="#">Archeologie</a>
                 <a href="#">Backpacking</a>
                 <a href="#">Bergbeklimmen</a>
             </div>
+        </div>
+        <div id="login">
+            <?php
+                if(isset($_SESSION['role'])){
+                    echo "Welcome <a href='logout.php'>".$_SESSION['naam']."</a>";
+                }
+                else{
+                    echo "<a href='login.php'>Login</a>";
+                }
+            ?>
         </div>
     </nav>
     <main>
@@ -38,7 +53,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Donec ac ante quis leo luctus tincidunt vitae in leo.
                         Fusce sem nunc, mollis vel dolor vel, imperdiet luctus lectus.</p>
-                    <a href="twl.html" class="readmore">Lees verder</a>
+                    <a href="twl.php" class="readmore">Lees verder</a>
                     <p>In het nieuws</p>
                 </article>
                 <article> <h1>Verder kijken</h1>
@@ -66,7 +81,7 @@
             <section>
                 <article class="sideart">
                     <h1>Laatste berichten</h1>
-                    <a href="twl.html">Tis weer lente</a>
+                    <a href="twl.php">Tis weer lente</a>
                     <a href="vk.html">Verder kijken</a>
                     <a href="#">No messages.</a>
                     <a href="#">No messages.</a>
